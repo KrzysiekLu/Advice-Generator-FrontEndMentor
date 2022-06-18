@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+:root {
+  --main-background-color: rgb(31, 38, 51);
+  --card-background-color: hsl(217, 19%, 24%);
+  --main-font-color: hsl(193, 38%, 86%);
+  --acents: hsl(150, 100%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--main-background-color);
+  font-family: "Manrope", sans-serif;
+}
+
+.card {
+  background: var(--card-background-color);
+  color: var(--main-font-color);
+  max-width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 800;
+  padding: 2rem 1.1rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card__advice-info {
+  color: var(--acents);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__advice-text {
+  margin-bottom: 1.5rem;
+}
+
+.card__patern-divider {
+  margin-bottom: 2.5rem;
+}
+
+.card .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  border: 0px;
+  background-color: var(--acents);
+  position: absolute;
+  bottom: -32.5px;
+}
+
+.card .button:hover {
+  -webkit-box-shadow: 0px 0px 40px -5px var(--acents);
+          box-shadow: 0px 0px 40px -5px var(--acents);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
