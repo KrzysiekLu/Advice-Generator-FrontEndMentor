@@ -14,6 +14,8 @@ const getJson = async (url) => {
 };
 const giveMeAdvice = async () => {
   try {
+    adviceTextEl.style.opacity = 0;
+
     do {
       let adviceData = await getJson("https://api.adviceslip.com/advice");
       if (!adviceData) throw new Error("Couldn't get data");
@@ -24,6 +26,7 @@ const giveMeAdvice = async () => {
     } while (current === adviceIndex);
 
     adviceTextEl.textContent = adviceText;
+    adviceTextEl.style.opacity = 1;
     adviceIndexEl.textContent = adviceIndex;
   } catch (error) {
     adviceTextEl.textContent = error.message;

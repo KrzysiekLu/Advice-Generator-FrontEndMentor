@@ -24,7 +24,7 @@ body {
 .card {
   background: var(--card-background-color);
   color: var(--main-font-color);
-  max-width: 95%;
+  width: 95%;
   min-height: 400px;
   display: flex;
   align-items: center;
@@ -47,6 +47,8 @@ body {
   }
   &__advice-text {
     margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: 1s all;
   }
   &__patern-divider {
     margin-bottom: 2.5rem;

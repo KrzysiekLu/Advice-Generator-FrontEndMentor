@@ -31,7 +31,7 @@ body {
 .card {
   background: var(--card-background-color);
   color: var(--main-font-color);
-  max-width: 95%;
+  width: 95%;
   min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,6 +65,9 @@ body {
 
 .card__advice-text {
   margin-bottom: 1.5rem;
+  opacity: 0;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 .card__patern-divider {
