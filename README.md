@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://advice-generator-krzysiek.netlify.app/)
+- Solution URL: [FrontEndMentor Solution](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/html-cssscss-js-api-asyncawait-flexbox-aPufSrK6oe)
+- Live Site URL: [Live site](https://advice-generator-krzysiek.netlify.app/)
 
 ## My process
 
