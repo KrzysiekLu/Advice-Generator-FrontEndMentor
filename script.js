@@ -15,13 +15,11 @@ const getJson = async (url) => {
 const giveMeAdvice = async () => {
   try {
     adviceTextEl.style.opacity = 0;
-
     do {
       let adviceData = await getJson("https://api.adviceslip.com/advice");
       if (!adviceData) throw new Error("Couldn't get data");
       adviceText = adviceData.slip.advice;
       adviceIndex = adviceData.slip.id;
-
       current = +adviceIndexEl.textContent;
     } while (current === adviceIndex);
 

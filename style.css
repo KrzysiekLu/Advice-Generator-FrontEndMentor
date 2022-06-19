@@ -18,6 +18,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -50,7 +54,7 @@ body {
   text-align: center;
   font-weight: 800;
   padding: 2rem 1.1rem;
-  border-radius: 12px;
+  border-radius: 1rem;
   position: relative;
 }
 
@@ -91,6 +95,10 @@ body {
   background-color: var(--acents);
   position: absolute;
   bottom: -32.5px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
 .card .button:hover {
@@ -99,11 +107,14 @@ body {
 }
 
 .attribution {
+  margin-top: 50px;
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 
 .attribution a {
+  margin-top: 100px;
   color: #3e52a3;
 }
 
