@@ -1,20 +1,32 @@
 const button = document.querySelector(".card__button");
+const adviceIndexEl = document.querySelector(".advice-info__index");
+const adviceTextEl = document.querySelector(".card__advice-text");
 
+const getJson = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Couldn't get data");
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
+};
 const giveMeAdvice = async () => {
   try {
-    const adviceResp = await fetch("https://api.adviceslip.com/advice");
-    let curentAdciveIndex;
-    if (!adviceResp.ok) throw new Error("Problem with response");
-    const adviceData = await adviceResp.json();
-    adviceText = adviceData.slip.advice;
-    adviceIndex = adviceData.slip.id;
+    do {
+      let adviceData = await getJson("https://api.adviceslip.com/advice");
+      if (!adviceData) throw new Error("Couldn't get data");
+      adviceText = adviceData.slip.advice;
+      adviceIndex = adviceData.slip.id;
 
-    document.querySelector(".card__advice-text").textContent = adviceText;
-    document.querySelector(".advice-info__index").textContent = adviceIndex;
+      current = +adviceIndexEl.textContent;
+    } while (current === adviceIndex);
 
-    console.log(curentAdciveIndex, adviceIndex);
+    adviceTextEl.textContent = adviceText;
+    adviceIndexEl.textContent = adviceIndex;
   } catch (error) {
-    console.error(error.message);
+    adviceTextEl.textContent = error.message;
   }
 };
 button.addEventListener("click", giveMeAdvice);

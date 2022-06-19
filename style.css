@@ -32,6 +32,7 @@ body {
   background: var(--card-background-color);
   color: var(--main-font-color);
   max-width: 95%;
+  min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
