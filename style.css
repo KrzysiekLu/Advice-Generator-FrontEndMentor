@@ -65,10 +65,13 @@ body {
   background-color: var(--acents);
   position: absolute;
   bottom: -32.5px;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
 }
 .card .button:hover {
   box-shadow: 0px 0px 40px -5px var(--acents);
+}
+.card .button--clicked {
+  transform: rotate(90deg);
 }
 
 .attribution {

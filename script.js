@@ -33,4 +33,7 @@ const giveMeAdvice = async () => {
     adviceTextEl.textContent = error.message;
   }
 };
-button.addEventListener("click", giveMeAdvice);
+button.addEventListener("click", () => {
+  giveMeAdvice();
+  button.classList.toggle("button--clicked");
+});
