@@ -48,8 +48,8 @@ body {
   }
   &__advice-text {
     margin-bottom: 1.5rem;
-    opacity: 0;
-    transition: 1s all;
+    opacity: 1;
+    transition: 0.5s opacity;
   }
   &__patern-divider {
     margin-bottom: 2.5rem;

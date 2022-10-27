@@ -12,20 +12,23 @@ const getJson = async (url) => {
     console.error(err);
   }
 };
+
 const giveMeAdvice = async () => {
   try {
     adviceTextEl.style.opacity = 0;
+    let adviceData = await getJson("https://api.adviceslip.com/advice");
+
     do {
-      let adviceData = await getJson("https://api.adviceslip.com/advice");
       if (!adviceData) throw new Error("Couldn't get data");
       adviceText = adviceData.slip.advice;
       adviceIndex = adviceData.slip.id;
-      current = +adviceIndexEl.textContent;
-    } while (current === adviceIndex);
+      current = adviceIndexEl.textContent;
+    } while (current === adviceText);
 
-    adviceTextEl.textContent = adviceText;
-    adviceTextEl.style.opacity = 1;
-    adviceIndexEl.textContent = adviceIndex;
+    setTimeout(() => {
+      adviceTextEl.style.opacity = 1;
+      adviceTextEl.textContent = adviceText;
+    }, 500);
   } catch (error) {
     adviceTextEl.textContent = error.message;
   }
